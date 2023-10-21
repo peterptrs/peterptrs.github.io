@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>GAME ROOM</title>
+</head>
+<body>
+    <header>
+        <h1>Keeneland Billards</h1>
+        <nav>
+            <ul>
+                <li><a href="#location">Our Location</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#rsvp">RSVP</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Location">
+        <h2>Welcome to the fine gaming experience</h2>
+        <p>Join us today at 385 North Walton Dr.</p>
+        <p>New location opening soon in downtown Houston!!</p>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Phil and Ben are two enthusiastic business owners that shares pride in providing an excellent gaming experience.</p>
+    </section>
+    <section id="events">
+        <h2>House Events</h2>
+        <p>Join us for the following events:</p>
+        <ul>
+            <li>Raffle night : October 22 Sunday</li>
+            <li>Bingo Night : October 30 monday.</li>
+        </ul>
+    </section>
+    <section id="gallery">
+        <h2>Photo Gallery</h2>
+        <p>View some of our favorite moments.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Niels_Feijen_NL.JPG" alt="Niels Feijen" width="300">
+    </section>
+    <section id="rsvp">
+        <h2>Reserve Yourself a seat Today!!!</h2>
+        <p>Kindly respond by [10/21/2023].</p>
+        <form id="rsvp-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <button type="submit">RSVP</button>
+        </form>
+        <div id="thank-you-message" style="display: none;">
+            <p>Thank you for your RSVP! We look forward to seeing you at our event.</p>
+        </div>
+    </section>
+    
+    <script>
+        // Function to display the thank you message
+        function displayThankYouMessage() {
+            var thankYouMessage = document.getElementById("thank-you-message");
+            thankYouMessage.style.display = "block";
+        }
+
+        // Function to handle the form submission
+        function handleFormSubmission(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            // You can include code to process the form data here if needed
+            displayThankYouMessage();
+        }
+
+        // Add an event listener to the form to handle its submission
+        var rsvpForm = document.getElementById("rsvp-form");
+        rsvpForm.addEventListener("submit", handleFormSubmission);
+    </script>
+</body>
+</html>
